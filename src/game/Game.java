@@ -6,8 +6,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.Arrays;
-import java.util.Random;
 
 public class Game {
 	private int h = 10;
@@ -174,10 +172,6 @@ public class Game {
 		if (flags != 0 && flags == b.getBombCount()) {
 			this.reveal(array);
 		}
-	}
-
-	public Block[][] getGrid() {
-		return grid;
 	}
 
 	public int getH() {

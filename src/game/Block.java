@@ -4,7 +4,6 @@ import settings.Settings;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Random;
 
 public class Block extends JButton {
 	private Settings settings;
@@ -26,12 +25,6 @@ public class Block extends JButton {
 		this.setVerticalAlignment(CENTER);
 		this.setFont(new Font("TimesRoman", Font.BOLD, 24));
 	}
-
-	public Block(int type, int x, int y, int bombs) {
-		this(type, x, y);
-		this.bombCount = bombs;
-	}
-
 
 	public void click() {
 		this.open = true;

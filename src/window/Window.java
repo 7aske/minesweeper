@@ -9,8 +9,9 @@ public class Window extends JFrame {
 	private Settings settings = new Settings();
 	private JPanel panel = new JPanel();
 	private Game game = new Game(this.panel);
-	private game.Block[][] grid;
-	public Window(){
+
+	public Window() {
+//		this.setSize((game.getW()+4) * settings.blockSize.width, (game.getH() + 5) * settings.blockSize.height);
 		this.setSize(settings.windowSize);
 		this.setLocationRelativeTo(null);
 		this.setTitle("Minesweeper");
