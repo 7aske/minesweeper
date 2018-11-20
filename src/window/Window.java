@@ -8,19 +8,14 @@ import javax.swing.*;
 public class Window extends JFrame {
 	private Settings settings = new Settings();
 	private JPanel panel = new JPanel();
-	private Game game = new Game();
+	private Game game = new Game(this.panel);
 	private game.Block[][] grid;
 	public Window(){
 		this.setSize(settings.windowSize);
 		this.setLocationRelativeTo(null);
 		this.setTitle("Minesweeper");
 		this.setResizable(false);
-		this.grid = game.getGrid();
-		for (int i = 0; i < game.getH(); i++){
-			for (int j = 0; j < game.getW(); j++) {
-				this.panel.add(grid[i][j]);
-			}
-		}
+		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.add(panel);
 		this.setVisible(true);
 	}
