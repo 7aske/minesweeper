@@ -36,7 +36,7 @@ public class Block extends JButton {
 			}
 		} else if (this.type == 1) {
 			this.setBackground(new Color(1.0f, 0.0f, 0.0f));
-			this.setText("B");
+			this.setText("X");
 
 		}
 	}

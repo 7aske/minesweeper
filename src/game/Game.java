@@ -52,7 +52,7 @@ public class Game {
 
 				} else if(b.getType() == 1){
 					b.setBackground(new Color(1.0f,0.0f,0.0f));
-					b.setText("B");
+					b.setText("X");
 				}
 
 			}
