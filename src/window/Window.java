@@ -11,7 +11,7 @@ public class Window extends JFrame {
 	private Game game = new Game();
 	private game.Block[][] grid;
 	public Window(){
-		this.setSize(settings.windowSize);
+		this.setSize(settings.WINDOW_SIZE);
 		this.setLocationRelativeTo(null);
 		this.setTitle("Minesweeper");
 		this.setResizable(false);

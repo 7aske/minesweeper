@@ -8,27 +8,32 @@ import java.util.Random;
 
 public class Block extends JButton {
 	private Settings settings;
-	public Block(String text){
-		this.setPreferredSize(settings.blockSize);
+	public Block(int value){
+		this.setPreferredSize(settings.BLOCK_SIZE);
 		this.setBorder(BorderFactory.createLineBorder(Color.black));
 		this.setHorizontalAlignment(CENTER);
 		this.setVerticalAlignment(CENTER);
 		this.setOpaque(true);
 		Random rand = new Random();
-		float r = rand.nextFloat();
-		float g = rand.nextFloat();
-		float b = rand.nextFloat();
+		int r = 211;
+		int g = 211;
+		int b = 211;
 
 		Color color = new Color(r,g,b);
 
 		this.setBackground(color);
-		this.setText(text);
 
 		this.addActionListener(e->{
-			final float rl = rand.nextFloat();
-			final float gl = rand.nextFloat();
-			final float bl = rand.nextFloat();
+			final int rl = 128;
+			final int gl = 128;
+			final int bl = 128;
 			this.setColor(new Color(rl,gl,bl));
+			if (value == -1)
+				this.setText("B");
+			else if (value == 0)
+				this.setText("");
+			else
+				this.setText(Integer.toString(value));
 		});
 
 	}
